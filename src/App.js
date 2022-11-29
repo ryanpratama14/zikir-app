@@ -60,7 +60,7 @@ function App() {
             setNum(num + 1);
             setZikir("Keep praying...");
             if (num === 33) {
-              setNum(0);
+              setNum(1);
               if (word === "سُـبْحانَ الله") {
                 setWord("ٱلْحَمْدُ لِلَّٰهِ");
               } else if (word === "ٱلْحَمْدُ لِلَّٰهِ") {
