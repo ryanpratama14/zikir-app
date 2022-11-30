@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/zikir-app/static/css/main.9468ccf1.css",
-    "main.js": "/zikir-app/static/js/main.1a47c40c.js",
+    "main.js": "/zikir-app/static/js/main.7c162111.js",
     "static/media/logo2.png": "/zikir-app/static/media/logo2.4788fb18e84f5597cc45.png",
     "index.html": "/zikir-app/index.html",
     "main.9468ccf1.css.map": "/zikir-app/static/css/main.9468ccf1.css.map",
-    "main.1a47c40c.js.map": "/zikir-app/static/js/main.1a47c40c.js.map"
+    "main.7c162111.js.map": "/zikir-app/static/js/main.7c162111.js.map"
   },
   "entrypoints": [
     "static/css/main.9468ccf1.css",
-    "static/js/main.1a47c40c.js"
+    "static/js/main.7c162111.js"
   ]
 }
