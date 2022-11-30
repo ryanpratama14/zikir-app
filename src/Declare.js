@@ -3,16 +3,12 @@ import logo from "./logo2.png";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
 import Example2 from "./Nav2";
 
 const Declare = () => {
   const [word, setWord] = useState("أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا ٱللَّٰ");
   const [button, setButton] = useState("Next");
-  const openInNewTab = (url) => {
-    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
-    if (newWindow) newWindow.opener = null;
-  };
+
   const ResetButton = () => {
     return (
       <button
@@ -24,7 +20,6 @@ const Declare = () => {
     );
   };
 
-  const navigate = useNavigate();
   const notify = () =>
     toast.success("Welcome, Brother!", {
       position: "top-center",

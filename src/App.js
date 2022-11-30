@@ -3,19 +3,14 @@ import logo from "./logo2.png";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
+
 import Example from "./Nav";
 
 function App() {
-  const openInNewTab = (url) => {
-    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
-    if (newWindow) newWindow.opener = null;
-  };
   const [num, setNum] = useState(0);
   const [word, setWord] = useState("سُـبْحانَ الله");
   const [totalNum, setTotalNum] = useState(0);
   const [zikir, setZikir] = useState("Start");
-  const navigate = useNavigate();
   const notify = () =>
     toast.success("You're getting closer to the holy gate...", {
       position: "top-right",
