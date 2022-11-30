@@ -14,6 +14,7 @@ export default function Routing() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<App />} />
         <Route path="declare" element={<Declare />} />
         <Route path="*" element={<App />} />
       </Routes>

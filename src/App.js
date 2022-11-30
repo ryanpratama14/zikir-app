@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import Example from "./Nav";
 
 function App() {
   const openInNewTab = (url) => {
@@ -28,7 +29,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="shadow-md w-full relative top-0 left-0">
+      <Example />
+      {/* <div className="shadow-md w-full relative top-0 left-0">
         <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
           <div
             className="font-bold text-2xl cursor-pointer flex items-center 
@@ -47,7 +49,7 @@ function App() {
             Declare your faith
           </button>
         </div>
-      </div>
+      </div> */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Total: {totalNum}</p>
@@ -100,20 +102,7 @@ function App() {
           </a>
           . All Rights Reserved.
         </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-          <li>
-            <a
-              onClick={() =>
-                openInNewTab(
-                  "https://www.google.com/search?q=mosque+near+me&oq=mosque&aqs=chrome.0.69i59j69i57j0i402j0i512j46i175i199i512l2j0i512j46i512j0i512l2.800j0j4&sourceid=chrome&ie=UTF-8"
-                )
-              }
-              class="mr-4"
-            >
-              <ion-icon name="location-outline"></ion-icon>Mosque near me
-            </a>
-          </li>
-        </ul>
+        <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"></ul>
       </footer>
     </div>
   );
