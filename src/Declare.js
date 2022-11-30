@@ -3,12 +3,15 @@ import logo from "./logo2.png";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Example2 from "./Nav2";
+import { useNavigate } from "react-router-dom";
 
 const Declare = () => {
   const [word, setWord] = useState("أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا ٱللَّٰ");
   const [button, setButton] = useState("Next");
-
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
   const ResetButton = () => {
     return (
       <button
@@ -20,6 +23,7 @@ const Declare = () => {
     );
   };
 
+  const navigate = useNavigate();
   const notify = () =>
     toast.success("Welcome, Brother!", {
       position: "top-center",
@@ -28,8 +32,7 @@ const Declare = () => {
 
   return (
     <div className="App">
-      <Example2 />
-      {/* <div className="shadow-md w-full relative top-0 left-0">
+      <div className="shadow-md w-full relative top-0 left-0">
         <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
           <div
             className="font-bold text-2xl cursor-pointer flex items-center 
@@ -49,7 +52,7 @@ const Declare = () => {
             Back to Zikir App
           </button>
         </div>
-      </div> */}
+      </div>
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -82,7 +85,20 @@ const Declare = () => {
           </a>
           . All Rights Reserved.
         </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"></ul>
+        <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+          <li>
+            <a
+              onClick={() =>
+                openInNewTab(
+                  "https://www.google.com/search?q=mosque+near+me&oq=mosque+near+me&aqs=chrome.0.69i59j0i10i512l9.4290j0j7&sourceid=chrome&ie=UTF-8"
+                )
+              }
+              class="mr-4 hover:underline md:mr-6 "
+            >
+              <ion-icon name="location-outline"></ion-icon>Mosque near me
+            </a>
+          </li>
+        </ul>
       </footer>
     </div>
   );
