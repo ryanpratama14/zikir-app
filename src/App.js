@@ -38,7 +38,7 @@ function App() {
           </div>
           <button
             onClick={() => {
-              navigate("/declare");
+              navigate("zikir-app/declare");
             }}
             type="button"
             className="bg-blue-600 text-xl text-white py-2 px-6 rounded md:ml-8 hover:bg-blue-700

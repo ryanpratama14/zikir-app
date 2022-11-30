@@ -15,7 +15,7 @@ export default function Routing() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="declare" element={<Declare />} />
+        <Route path="zikir-app/declare" element={<Declare />} />
         <Route path="*" element={<App />} />
       </Routes>
     </BrowserRouter>
