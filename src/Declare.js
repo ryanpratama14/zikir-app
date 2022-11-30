@@ -33,7 +33,7 @@ const Declare = () => {
           </div>
           <button
             onClick={() => {
-              navigate("/");
+              navigate("/zikir-app");
             }}
             type="button"
             className="bg-blue-600 text-xl text-white py-2 px-6 rounded md:ml-8 hover:bg-blue-700
